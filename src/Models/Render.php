@@ -61,6 +61,8 @@ class Render extends Model
             'duration' => $this->duration,
             'url' => $this->status === self::DONE ? $this->outputUrl() : null,
             'music_credit' => ($this->track ?? $this->template?->track)?->credit(),
+            // Silent video: the user adds this song from Instagram Music when posting.
+            'instagram_sound' => ($this->track ?? $this->template?->track)?->instagramSound(),
             'error' => $this->status === self::FAILED ? 'ساخت ویدیو ناموفق بود. دوباره تلاش کنید.' : null,
         ];
     }

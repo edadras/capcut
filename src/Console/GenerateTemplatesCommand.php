@@ -29,7 +29,7 @@ class GenerateTemplatesCommand extends Command
             }
         }
 
-        $tracks = Track::active()->get(['id', 'mood'])
+        $tracks = Track::active()->files()->get(['id', 'mood'])
             ->groupBy('mood')
             ->map(fn ($g) => $g->map(fn ($t) => ['id' => $t->id, 'mood' => $t->mood])->values()->all())
             ->all();

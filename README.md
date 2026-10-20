@@ -71,6 +71,34 @@ php artisan reel-maker:fetch-music --mood=happy --mood=romantic --per-mood=100
 **ذکر منبع الزامی است:** مجوز CC BY می‌گوید نام آهنگ و هنرمند باید ذکر شود. صفحه نتیجه یک متن آماده (با دکمه کپی)
 برای کپشن پست نشان می‌دهد و API هم آن را در فیلد `music_credit` برمی‌گرداند.
 
+### آهنگ‌های ترند اینستاگرام (بدون فایل)
+
+برای آهنگ‌های مشهور و ترند (APT.، Die With A Smile، BLOK3، Sijal، …) فایل صوتی در سایت نگه داشته نمی‌شود.
+کاربر آهنگ ترند را انتخاب می‌کند و ویدیو **بدون صدا** ساخته می‌شود (اگر BPM آهنگ وارد شده باشد، تعویض عکس‌ها روی ضرب همان آهنگ است).
+صفحه نتیجه مرحله‌به‌مرحله توضیح می‌دهد که موقع انتشار ریلز، آهنگ را از کتابخانه موسیقی خود اینستاگرام اضافه کند
+(اینستاگرام مجوز این آهنگ‌ها را دارد) و لینک گوش‌دادن در Spotify / YouTube / Radio Javan را هم نشان می‌دهد.
+
+```bash
+php artisan reel-maker:import-trending                 # فهرست همراه پکیج: ۶۵ آهنگ (جهانی، ترکیه، رو به رشد، پاییزی، فارسی) — ۲۰ اکتبر ۲۰۲۶
+php artisan reel-maker:import-trending my-list.json    # فهرست به‌روز خودتان
+```
+
+فرمت فایل `resources/data/instagram-trending.json`:
+
+```jsonc
+{ "sounds": [
+  { "title": "APT.", "artist": "ROSÉ & Bruno Mars", "region": "global", "mood": "pop",
+    "trending_at": "2026-10-16",
+    "bpm": 149,        // اختیاری: برای هماهنگی کات‌ها با ضرب
+    "start": 42,       // اختیاری: ثانیه‌ای که کاربر آهنگ را در اینستاگرام از آن شروع کند
+    "links": { "spotify": "https://open.spotify.com/search/…", "youtube": "https://www.youtube.com/results?…" } }
+]}
+```
+
+آهنگ‌هایی که در فهرست جدید نیستند خودکار غیرفعال می‌شوند (ترندها هر هفته عوض می‌شوند).
+حال‌وهوای (mood) آهنگ‌ها در فهرست همراه پکیج تخمینی است و BPM آن‌ها خالی است؛ با پر کردن `bpm` هماهنگی با ضرب فعال می‌شود.
+ترندهای فارسی در منابع تأیید نشده‌اند و فقط آهنگ‌های شناخته‌شده‌اند.
+
 ### آهنگ‌های خودتان
 
 آهنگ‌ها را در پوشه‌هایی به نام «حال‌وهوا» (mood) بگذارید. نام فایل به شکل `Artist - Title.mp3` باشد:
@@ -162,7 +190,7 @@ php artisan queue:work --queue=default --timeout=1000
 | `GET /api/reels/templates?category=love&photos=5` | لیست قالب‌ها (JSON) |
 | `GET /api/reels/templates/{slug}` | جزئیات قالب و آهنگ‌های قابل انتخاب |
 | `POST /api/reels/templates/{slug}/render` | `images[]`، `caption`، `track_id` → `202` |
-| `GET /api/reels/renders/{uuid}` | `status`: pending / processing / done / failed و `url` |
+| `GET /api/reels/renders/{uuid}` | `status`، `url`، `music_credit` و برای آهنگ ترند `instagram_sound` (جست‌وجو، زمان شروع، لینک‌ها) |
 | `GET /api/reels/tracks` | لیست آهنگ‌ها |
 
 پیشوند مسیرها و middlewareها در `config/reel-maker.php` قابل تغییرند. اگر می‌خواهید فقط کاربران لاگین‌شده ویدیو بسازند،
@@ -196,11 +224,12 @@ src/
 ├── Rendering/FfmpegCommandBuilder   تبدیل قالب + عکس‌ها به دستور FFmpeg (بدون shell)
 ├── Rendering/AudioAnalyzer          مدت آهنگ، تشخیص BPM و قسمت اوج
 ├── Music/                           دانلود از ccMixter و Jamendo (فقط CC BY / CC0)
+├── resources/data/instagram-trending.json   فهرست آهنگ‌های ترند اینستاگرام (بدون فایل)
 ├── Support/TrackImporter            افزودن آهنگ به کتابخانه
 ├── Rendering/Renderer               اجرای رندر و ذخیره خروجی
 ├── Jobs/RenderReelJob               Job صف
 ├── Http/…                           کنترلرها و ولیدیشن
-└── Console/…                        fetch-music، import-music، generate-templates، previews
+└── Console/…                        fetch-music، import-trending، import-music، generate-templates، previews
 ```
 
 ## تست

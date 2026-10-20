@@ -8,6 +8,7 @@ use ReelMaker\Console\FetchMusicCommand;
 use ReelMaker\Console\GeneratePreviewsCommand;
 use ReelMaker\Console\GenerateTemplatesCommand;
 use ReelMaker\Console\ImportMusicCommand;
+use ReelMaker\Console\ImportTrendingCommand;
 use ReelMaker\Rendering\AudioAnalyzer;
 use ReelMaker\Rendering\FfmpegCommandBuilder;
 
@@ -50,6 +51,7 @@ class ReelMakerServiceProvider extends ServiceProvider
                 GenerateTemplatesCommand::class,
                 ImportMusicCommand::class,
                 FetchMusicCommand::class,
+                ImportTrendingCommand::class,
                 GeneratePreviewsCommand::class,
             ]);
 

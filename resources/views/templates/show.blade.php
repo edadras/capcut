@@ -45,12 +45,29 @@
 
         <label for="track_id">آهنگ</label>
         <select name="track_id" id="track_id">
-            @foreach ($tracks as $track)
-                <option value="{{ $track->id }}" @selected((int) old('track_id', $template->track_id) === $track->id)>
-                    {{ $track->title }}{{ $track->artist ? ' — '.$track->artist : '' }}
-                </option>
-            @endforeach
+            <optgroup label="آهنگ‌های کتابخانه (داخل ویدیو)">
+                @foreach ($tracks as $track)
+                    <option value="{{ $track->id }}" @selected((int) old('track_id', $template->track_id) === $track->id)>
+                        {{ $track->title }}{{ $track->artist ? ' — '.$track->artist : '' }}
+                    </option>
+                @endforeach
+            </optgroup>
+            @php($regions = ['global' => 'جهانی', 'turkey' => 'ترکیه', 'rising' => 'رو به رشد', 'autumn' => 'پاییزی', 'persian' => 'فارسی'])
+            @if ($trending->isNotEmpty())
+                <optgroup label="🔥 ترندهای اینستاگرام (در اینستاگرام اضافه می‌شود)">
+                    @foreach ($trending as $track)
+                        <option value="{{ $track->id }}" data-instagram="1" @selected((int) old('track_id') === $track->id)>
+                            🔥 {{ $track->title }}{{ $track->artist ? ' — '.$track->artist : '' }} · {{ $regions[$track->region] ?? '' }}
+                        </option>
+                    @endforeach
+                </optgroup>
+            @endif
         </select>
+        <p class="muted" id="ig-note" hidden style="font-size:13px;line-height:1.9">
+            ویدیو بدون صدا ساخته می‌شود<span id="ig-beat"></span>.
+            موقع انتشار ریلز در اینستاگرام روی آیکون 🎵 موسیقی بزنید و همین آهنگ را جست‌وجو کنید؛
+            اینستاگرام مجوز این آهنگ‌ها را خودش دارد. (در بعضی حساب‌های تجاری ممکن است آهنگ در دسترس نباشد.)
+        </p>
 
         <div style="margin-top:20px">
             <button class="btn" type="submit" id="submit" disabled>✨ ساخت ویدیو</button>
@@ -104,6 +121,15 @@
     drop.ondragover = e => { e.preventDefault(); drop.classList.add('over'); };
     drop.ondragleave = () => drop.classList.remove('over');
     drop.ondrop = e => { e.preventDefault(); drop.classList.remove('over'); add(e.dataTransfer.files); };
+    const track = document.getElementById('track_id'), note = document.getElementById('ig-note');
+    const beats = @json($trending->pluck('bpm', 'id'));
+    const toggleNote = () => {
+        const opt = track.selectedOptions[0];
+        note.hidden = !(opt && opt.dataset.instagram);
+        document.getElementById('ig-beat').textContent = opt && beats[opt.value] ? ' و تعویض عکس‌ها روی ضرب همین آهنگ تنظیم می‌شود' : '';
+    };
+    track.onchange = toggleNote;
+    toggleNote();
     document.getElementById('reel-form').onsubmit = () => { submit.disabled = true; submit.textContent = 'در حال ارسال…'; };
     sync();
 })();

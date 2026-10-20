@@ -30,16 +30,26 @@ class TemplateController extends Controller
         abort_unless($template->is_active, 404);
         $template->load('track');
 
-        $tracks = Track::active()
+        $tracks = Track::active()->files()
             ->orderByRaw('mood = ? desc', [$template->config['mood'] ?? $template->track?->mood])
             ->orderBy('title')
             ->get(['id', 'title', 'artist', 'mood', 'path']);
 
+        // Trending Instagram sounds: rendered silent, added by the user inside Instagram.
+        $trending = Track::active()->instagram()
+            ->orderByRaw('mood = ? desc', [$template->config['mood'] ?? $template->track?->mood])
+            ->orderByDesc('trending_at')
+            ->orderBy('id')
+            ->get(['id', 'title', 'artist', 'mood', 'region', 'bpm']);
+
         if ($request->wantsJson()) {
-            return $this->present($template) + ['tracks' => $tracks->map->only(['id', 'title', 'artist', 'mood'])];
+            return $this->present($template) + [
+                'tracks' => $tracks->map->only(['id', 'title', 'artist', 'mood']),
+                'instagram_sounds' => $trending->map->only(['id', 'title', 'artist', 'mood', 'region', 'bpm']),
+            ];
         }
 
-        return view('reel-maker::templates.show', compact('template', 'tracks'));
+        return view('reel-maker::templates.show', compact('template', 'tracks', 'trending'));
     }
 
     private function query(Request $request)

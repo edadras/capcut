@@ -1,0 +1,858 @@
+{
+  "updated": "2026-10-20",
+  "note": "Search/listen links only (no audio). Users add the song from Instagram Music when posting. Moods are editorial guesses; bpm/start (seconds) can be filled in for beat sync.",
+  "sources": {
+    "global": "https://soundmatcha.com/trending/",
+    "turkey": "https://www.sosyalkopru.com/blog/ekim-2026-turkiye-instagram-en-cok-tercih-edilen-10-ses",
+    "rising": "https://kabo.sh/tools/trending-instagram-audio",
+    "autumn": "https://www.socialpilot.co/blog/instagram-reels-trends",
+    "persian": null
+  },
+  "sounds": [
+    {
+      "title": "APT.",
+      "artist": "ROSÉ & Bruno Mars",
+      "region": "global",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/APT.%20ROS%C3%89%20%26%20Bruno%20Mars",
+        "youtube": "https://www.youtube.com/results?search_query=APT.+ROS%C3%89+%26+Bruno+Mars"
+      }
+    },
+    {
+      "title": "Ordinary",
+      "artist": "Alex Warren",
+      "region": "global",
+      "mood": "romantic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Ordinary%20Alex%20Warren",
+        "youtube": "https://www.youtube.com/results?search_query=Ordinary+Alex+Warren"
+      }
+    },
+    {
+      "title": "Beautiful Things",
+      "artist": "Benson Boone",
+      "region": "global",
+      "mood": "epic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Beautiful%20Things%20Benson%20Boone",
+        "youtube": "https://www.youtube.com/results?search_query=Beautiful+Things+Benson+Boone"
+      }
+    },
+    {
+      "title": "Die With A Smile",
+      "artist": "Lady Gaga & Bruno Mars",
+      "region": "global",
+      "mood": "romantic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Die%20With%20A%20Smile%20Lady%20Gaga%20%26%20Bruno%20Mars",
+        "youtube": "https://www.youtube.com/results?search_query=Die+With+A+Smile+Lady+Gaga+%26+Bruno+Mars"
+      }
+    },
+    {
+      "title": "Papaoutai (Afro Soul)",
+      "artist": "mikeeysmind, Chill77 & Unjaps",
+      "region": "global",
+      "mood": "chill",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Papaoutai%20%28Afro%20Soul%29%20mikeeysmind%2C%20Chill77%20%26%20Unjaps",
+        "youtube": "https://www.youtube.com/results?search_query=Papaoutai+%28Afro+Soul%29+mikeeysmind%2C+Chill77+%26+Unjaps"
+      }
+    },
+    {
+      "title": "The Sound of Silence (CYRIL Remix)",
+      "artist": "Disturbed",
+      "region": "global",
+      "mood": "epic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/The%20Sound%20of%20Silence%20%28CYRIL%20Remix%29%20Disturbed",
+        "youtube": "https://www.youtube.com/results?search_query=The+Sound+of+Silence+%28CYRIL+Remix%29+Disturbed"
+      }
+    },
+    {
+      "title": "As It Was",
+      "artist": "Harry Styles",
+      "region": "global",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/As%20It%20Was%20Harry%20Styles",
+        "youtube": "https://www.youtube.com/results?search_query=As+It+Was+Harry+Styles"
+      }
+    },
+    {
+      "title": "Viva La Vida",
+      "artist": "Coldplay",
+      "region": "global",
+      "mood": "epic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Viva%20La%20Vida%20Coldplay",
+        "youtube": "https://www.youtube.com/results?search_query=Viva+La+Vida+Coldplay"
+      }
+    },
+    {
+      "title": "Dai Dai",
+      "artist": "Shakira & Burna Boy",
+      "region": "global",
+      "mood": "energetic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Dai%20Dai%20Shakira%20%26%20Burna%20Boy",
+        "youtube": "https://www.youtube.com/results?search_query=Dai+Dai+Shakira+%26+Burna+Boy"
+      }
+    },
+    {
+      "title": "Raindance",
+      "artist": "Dave & Tems",
+      "region": "global",
+      "mood": "energetic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Raindance%20Dave%20%26%20Tems",
+        "youtube": "https://www.youtube.com/results?search_query=Raindance+Dave+%26+Tems"
+      }
+    },
+    {
+      "title": "Dracula",
+      "artist": "Tame Impala",
+      "region": "global",
+      "mood": "chill",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Dracula%20Tame%20Impala",
+        "youtube": "https://www.youtube.com/results?search_query=Dracula+Tame+Impala"
+      }
+    },
+    {
+      "title": "So Easy (To Fall In Love)",
+      "artist": "Olivia Dean",
+      "region": "global",
+      "mood": "happy",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/So%20Easy%20%28To%20Fall%20In%20Love%29%20Olivia%20Dean",
+        "youtube": "https://www.youtube.com/results?search_query=So+Easy+%28To+Fall+In+Love%29+Olivia+Dean"
+      }
+    },
+    {
+      "title": "End of Beginning",
+      "artist": "Djo",
+      "region": "global",
+      "mood": "sad",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/End%20of%20Beginning%20Djo",
+        "youtube": "https://www.youtube.com/results?search_query=End+of+Beginning+Djo"
+      }
+    },
+    {
+      "title": "Runaway",
+      "artist": "AURORA",
+      "region": "global",
+      "mood": "calm",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Runaway%20AURORA",
+        "youtube": "https://www.youtube.com/results?search_query=Runaway+AURORA"
+      }
+    },
+    {
+      "title": "Perfect",
+      "artist": "Ed Sheeran",
+      "region": "global",
+      "mood": "romantic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Perfect%20Ed%20Sheeran",
+        "youtube": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran"
+      }
+    },
+    {
+      "title": "BIRDS OF A FEATHER",
+      "artist": "Billie Eilish",
+      "region": "global",
+      "mood": "romantic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/BIRDS%20OF%20A%20FEATHER%20Billie%20Eilish",
+        "youtube": "https://www.youtube.com/results?search_query=BIRDS+OF+A+FEATHER+Billie+Eilish"
+      }
+    },
+    {
+      "title": "In This Shirt",
+      "artist": "The Irrepressibles",
+      "region": "global",
+      "mood": "sad",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/In%20This%20Shirt%20The%20Irrepressibles",
+        "youtube": "https://www.youtube.com/results?search_query=In+This+Shirt+The+Irrepressibles"
+      }
+    },
+    {
+      "title": "Anxiety",
+      "artist": "Doechii",
+      "region": "global",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Anxiety%20Doechii",
+        "youtube": "https://www.youtube.com/results?search_query=Anxiety+Doechii"
+      }
+    },
+    {
+      "title": "Strangers",
+      "artist": "Kenya Grace",
+      "region": "global",
+      "mood": "chill",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Strangers%20Kenya%20Grace",
+        "youtube": "https://www.youtube.com/results?search_query=Strangers+Kenya+Grace"
+      }
+    },
+    {
+      "title": "Sweet Heat Lightning",
+      "artist": "Gregory Alan Isakov",
+      "region": "global",
+      "mood": "calm",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Sweet%20Heat%20Lightning%20Gregory%20Alan%20Isakov",
+        "youtube": "https://www.youtube.com/results?search_query=Sweet+Heat+Lightning+Gregory+Alan+Isakov"
+      }
+    },
+    {
+      "title": "TRALALA",
+      "artist": "manifest",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/TRALALA%20manifest",
+        "youtube": "https://www.youtube.com/results?search_query=TRALALA+manifest"
+      }
+    },
+    {
+      "title": "Sebebi Var",
+      "artist": "BLOK3",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Sebebi%20Var%20BLOK3",
+        "youtube": "https://www.youtube.com/results?search_query=Sebebi+Var+BLOK3"
+      }
+    },
+    {
+      "title": "Hileli",
+      "artist": "manifest, Ajda Pekkan",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Hileli%20manifest%2C%20Ajda%20Pekkan",
+        "youtube": "https://www.youtube.com/results?search_query=Hileli+manifest%2C+Ajda+Pekkan"
+      }
+    },
+    {
+      "title": "Çok Güzel Gülüyorsun",
+      "artist": "BLOK3, Poizi",
+      "region": "turkey",
+      "mood": "romantic",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/%C3%87ok%20G%C3%BCzel%20G%C3%BCl%C3%BCyorsun%20BLOK3%2C%20Poizi",
+        "youtube": "https://www.youtube.com/results?search_query=%C3%87ok+G%C3%BCzel+G%C3%BCl%C3%BCyorsun+BLOK3%2C+Poizi"
+      }
+    },
+    {
+      "title": "Ara Beni",
+      "artist": "Hadise",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Ara%20Beni%20Hadise",
+        "youtube": "https://www.youtube.com/results?search_query=Ara+Beni+Hadise"
+      }
+    },
+    {
+      "title": "Toz Pembe",
+      "artist": "manifest",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Toz%20Pembe%20manifest",
+        "youtube": "https://www.youtube.com/results?search_query=Toz+Pembe+manifest"
+      }
+    },
+    {
+      "title": "Eller Üzer",
+      "artist": "Serkan Nişancı",
+      "region": "turkey",
+      "mood": "sad",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Eller%20%C3%9Czer%20Serkan%20Ni%C5%9Fanc%C4%B1",
+        "youtube": "https://www.youtube.com/results?search_query=Eller+%C3%9Czer+Serkan+Ni%C5%9Fanc%C4%B1"
+      }
+    },
+    {
+      "title": "Yangın Yeri",
+      "artist": "Elif Buse Doğan",
+      "region": "turkey",
+      "mood": "sad",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Yang%C4%B1n%20Yeri%20Elif%20Buse%20Do%C4%9Fan",
+        "youtube": "https://www.youtube.com/results?search_query=Yang%C4%B1n+Yeri+Elif+Buse+Do%C4%9Fan"
+      }
+    },
+    {
+      "title": "Umrumdışı",
+      "artist": "Mabel Matiz",
+      "region": "turkey",
+      "mood": "pop",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Umrumd%C4%B1%C5%9F%C4%B1%20Mabel%20Matiz",
+        "youtube": "https://www.youtube.com/results?search_query=Umrumd%C4%B1%C5%9F%C4%B1+Mabel+Matiz"
+      }
+    },
+    {
+      "title": "Kayıp Kalp",
+      "artist": "BLOK3",
+      "region": "turkey",
+      "mood": "sad",
+      "trending_at": "2026-10-16",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Kay%C4%B1p%20Kalp%20BLOK3",
+        "youtube": "https://www.youtube.com/results?search_query=Kay%C4%B1p+Kalp+BLOK3"
+      }
+    },
+    {
+      "title": "Achchi Lagti Ho",
+      "artist": "Udit Narayan, Kavita Krishnamurthy",
+      "region": "rising",
+      "mood": "romantic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Achchi%20Lagti%20Ho%20Udit%20Narayan%2C%20Kavita%20Krishnamurthy",
+        "youtube": "https://www.youtube.com/results?search_query=Achchi+Lagti+Ho+Udit+Narayan%2C+Kavita+Krishnamurthy"
+      }
+    },
+    {
+      "title": "Training Season (Live from the Royal Albert Hall)",
+      "artist": "Dua Lipa",
+      "region": "rising",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Training%20Season%20%28Live%20from%20the%20Royal%20Albert%20Hall%29%20Dua%20Lipa",
+        "youtube": "https://www.youtube.com/results?search_query=Training+Season+%28Live+from+the+Royal+Albert+Hall%29+Dua+Lipa"
+      }
+    },
+    {
+      "title": "Shyam Nagina Ban Jate",
+      "artist": "Ankit Pandey, Ravindra Vasudev",
+      "region": "rising",
+      "mood": "happy",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Shyam%20Nagina%20Ban%20Jate%20Ankit%20Pandey%2C%20Ravindra%20Vasudev",
+        "youtube": "https://www.youtube.com/results?search_query=Shyam+Nagina+Ban+Jate+Ankit+Pandey%2C+Ravindra+Vasudev"
+      }
+    },
+    {
+      "title": "God's Favorite (feat. Sultaan)",
+      "artist": "Jordan Sandhu, Sultaan, Kaptaan, Avvy Sra",
+      "region": "rising",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/God%27s%20Favorite%20%28feat.%20Sultaan%29%20Jordan%20Sandhu%2C%20Sultaan%2C%20Kaptaan%2C%20Avvy%20Sra",
+        "youtube": "https://www.youtube.com/results?search_query=God%27s+Favorite+%28feat.+Sultaan%29+Jordan+Sandhu%2C+Sultaan%2C+Kaptaan%2C+Avvy+Sra"
+      }
+    },
+    {
+      "title": "Parvati",
+      "artist": "Sadhu Tiwari",
+      "region": "rising",
+      "mood": "calm",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Parvati%20Sadhu%20Tiwari",
+        "youtube": "https://www.youtube.com/results?search_query=Parvati+Sadhu+Tiwari"
+      }
+    },
+    {
+      "title": "QUE LOUCURA (Instrumental)",
+      "artist": "DJ EXE",
+      "region": "rising",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/QUE%20LOUCURA%20%28Instrumental%29%20DJ%20EXE",
+        "youtube": "https://www.youtube.com/results?search_query=QUE+LOUCURA+%28Instrumental%29+DJ+EXE"
+      }
+    },
+    {
+      "title": "Saxophones Getting Louder",
+      "artist": "AXRYN",
+      "region": "rising",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Saxophones%20Getting%20Louder%20AXRYN",
+        "youtube": "https://www.youtube.com/results?search_query=Saxophones+Getting+Louder+AXRYN"
+      }
+    },
+    {
+      "title": "O Sanam",
+      "artist": "Akhil Sachdeva",
+      "region": "rising",
+      "mood": "romantic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/O%20Sanam%20Akhil%20Sachdeva",
+        "youtube": "https://www.youtube.com/results?search_query=O+Sanam+Akhil+Sachdeva"
+      }
+    },
+    {
+      "title": "biting bullets",
+      "artist": "ridgeclub",
+      "region": "rising",
+      "mood": "chill",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/biting%20bullets%20ridgeclub",
+        "youtube": "https://www.youtube.com/results?search_query=biting+bullets+ridgeclub"
+      }
+    },
+    {
+      "title": "Fade Into You",
+      "artist": "Mazzy Star",
+      "region": "rising",
+      "mood": "calm",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Fade%20Into%20You%20Mazzy%20Star",
+        "youtube": "https://www.youtube.com/results?search_query=Fade+Into+You+Mazzy+Star"
+      }
+    },
+    {
+      "title": "This Will Be (An Everlasting Love)",
+      "artist": "Natalie Cole",
+      "region": "rising",
+      "mood": "happy",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/This%20Will%20Be%20%28An%20Everlasting%20Love%29%20Natalie%20Cole",
+        "youtube": "https://www.youtube.com/results?search_query=This+Will+Be+%28An+Everlasting+Love%29+Natalie+Cole"
+      }
+    },
+    {
+      "title": "Purple Rain",
+      "artist": "Prince & The Revolution",
+      "region": "rising",
+      "mood": "epic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Purple%20Rain%20Prince%20%26%20The%20Revolution",
+        "youtube": "https://www.youtube.com/results?search_query=Purple+Rain+Prince+%26+The+Revolution"
+      }
+    },
+    {
+      "title": "Grateful",
+      "artist": "Dennis Korn",
+      "region": "rising",
+      "mood": "calm",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Grateful%20Dennis%20Korn",
+        "youtube": "https://www.youtube.com/results?search_query=Grateful+Dennis+Korn"
+      }
+    },
+    {
+      "title": "Magnolia",
+      "artist": "Claudio Constantini",
+      "region": "rising",
+      "mood": "calm",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Magnolia%20Claudio%20Constantini",
+        "youtube": "https://www.youtube.com/results?search_query=Magnolia+Claudio+Constantini"
+      }
+    },
+    {
+      "title": "Bandoleros",
+      "artist": "Don Omar, Tego Calderón",
+      "region": "rising",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Bandoleros%20Don%20Omar%2C%20Tego%20Calder%C3%B3n",
+        "youtube": "https://www.youtube.com/results?search_query=Bandoleros+Don+Omar%2C+Tego+Calder%C3%B3n"
+      }
+    },
+    {
+      "title": "we fell in love in october",
+      "artist": "girl in red",
+      "region": "autumn",
+      "mood": "romantic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/we%20fell%20in%20love%20in%20october%20girl%20in%20red",
+        "youtube": "https://www.youtube.com/results?search_query=we+fell+in+love+in+october+girl+in+red"
+      }
+    },
+    {
+      "title": "My October",
+      "artist": "The Folks",
+      "region": "autumn",
+      "mood": "chill",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/My%20October%20The%20Folks",
+        "youtube": "https://www.youtube.com/results?search_query=My+October+The+Folks"
+      }
+    },
+    {
+      "title": "Goo Goo Muck",
+      "artist": "The Cramps",
+      "region": "autumn",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Goo%20Goo%20Muck%20The%20Cramps",
+        "youtube": "https://www.youtube.com/results?search_query=Goo+Goo+Muck+The+Cramps"
+      }
+    },
+    {
+      "title": "STORM II",
+      "artist": "GENER8ION & Yung Lean",
+      "region": "autumn",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/STORM%20II%20GENER8ION%20%26%20Yung%20Lean",
+        "youtube": "https://www.youtube.com/results?search_query=STORM+II+GENER8ION+%26+Yung+Lean"
+      }
+    },
+    {
+      "title": "Autumn Journey",
+      "artist": "Andrea Vanzo",
+      "region": "autumn",
+      "mood": "calm",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Autumn%20Journey%20Andrea%20Vanzo",
+        "youtube": "https://www.youtube.com/results?search_query=Autumn+Journey+Andrea+Vanzo"
+      }
+    },
+    {
+      "title": "My Own Universe",
+      "artist": "PattiJ North",
+      "region": "autumn",
+      "mood": "chill",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/My%20Own%20Universe%20PattiJ%20North",
+        "youtube": "https://www.youtube.com/results?search_query=My+Own+Universe+PattiJ+North"
+      }
+    },
+    {
+      "title": "WINDOWS IN BRAZIL (Sped Up)",
+      "artist": null,
+      "region": "autumn",
+      "mood": "energetic",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/WINDOWS%20IN%20BRAZIL%20%28Sped%20Up%29",
+        "youtube": "https://www.youtube.com/results?search_query=WINDOWS+IN+BRAZIL+%28Sped+Up%29"
+      }
+    },
+    {
+      "title": "Upside Down",
+      "artist": "Diana Ross",
+      "region": "autumn",
+      "mood": "happy",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Upside%20Down%20Diana%20Ross",
+        "youtube": "https://www.youtube.com/results?search_query=Upside+Down+Diana+Ross"
+      }
+    },
+    {
+      "title": "Ring My Bell",
+      "artist": "Anita Ward",
+      "region": "autumn",
+      "mood": "happy",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Ring%20My%20Bell%20Anita%20Ward",
+        "youtube": "https://www.youtube.com/results?search_query=Ring+My+Bell+Anita+Ward"
+      }
+    },
+    {
+      "title": "Less Than a Lover",
+      "artist": "JENNIE",
+      "region": "autumn",
+      "mood": "pop",
+      "trending_at": "2026-10-20",
+      "bpm": null,
+      "start": null,
+      "links": {
+        "spotify": "https://open.spotify.com/search/Less%20Than%20a%20Lover%20JENNIE",
+        "youtube": "https://www.youtube.com/results?search_query=Less+Than+a+Lover+JENNIE"
+      }
+    },
+    {
+      "title": "Adat Nadaram",
+      "artist": "Sijal, Raha, Heliyom, Koorosh & Sepehr Khalse",
+      "region": "persian",
+      "mood": "pop",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Adat+Nadaram+Sijal%2C+Raha%2C+Heliyom%2C+Koorosh+%26+Sepehr+Khalse",
+        "radiojavan": "https://www.radiojavan.com/search?query=Adat%20Nadaram"
+      }
+    },
+    {
+      "title": "You Fa",
+      "artist": "Ali Ardavan, Nima Tekido & Nivad",
+      "region": "persian",
+      "mood": "pop",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=You+Fa+Ali+Ardavan%2C+Nima+Tekido+%26+Nivad",
+        "radiojavan": "https://www.radiojavan.com/search?query=You%20Fa"
+      }
+    },
+    {
+      "title": "HYSTERIC",
+      "artist": "Isam & Koorosh",
+      "region": "persian",
+      "mood": "energetic",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=HYSTERIC+Isam+%26+Koorosh",
+        "radiojavan": "https://www.radiojavan.com/search?query=HYSTERIC"
+      }
+    },
+    {
+      "title": "Donyaye Dige",
+      "artist": "Arshiyas & Babak Jahanbakhsh",
+      "region": "persian",
+      "mood": "romantic",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Donyaye+Dige+Arshiyas+%26+Babak+Jahanbakhsh",
+        "radiojavan": "https://www.radiojavan.com/search?query=Donyaye%20Dige"
+      }
+    },
+    {
+      "title": "Adabiat",
+      "artist": "Chvrsi & Arian Dousti",
+      "region": "persian",
+      "mood": "pop",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Adabiat+Chvrsi+%26+Arian+Dousti",
+        "radiojavan": "https://www.radiojavan.com/search?query=Adabiat"
+      }
+    },
+    {
+      "title": "Hezar Omid",
+      "artist": "Arman Garshasbi",
+      "region": "persian",
+      "mood": "sad",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Hezar+Omid+Arman+Garshasbi",
+        "radiojavan": "https://www.radiojavan.com/search?query=Hezar%20Omid"
+      }
+    },
+    {
+      "title": "Shodi Nooram",
+      "artist": "Novan",
+      "region": "persian",
+      "mood": "romantic",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Shodi+Nooram+Novan",
+        "radiojavan": "https://www.radiojavan.com/search?query=Shodi%20Nooram"
+      }
+    },
+    {
+      "title": "Shakheye Gol",
+      "artist": "Sijal & Sogand",
+      "region": "persian",
+      "mood": "pop",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Shakheye+Gol+Sijal+%26+Sogand",
+        "radiojavan": "https://www.radiojavan.com/search?query=Shakheye%20Gol"
+      }
+    },
+    {
+      "title": "Begoo Be Donya",
+      "artist": "Ebi",
+      "region": "persian",
+      "mood": "romantic",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Begoo+Be+Donya+Ebi",
+        "radiojavan": "https://www.radiojavan.com/search?query=Begoo%20Be%20Donya"
+      }
+    },
+    {
+      "title": "Nakhoda",
+      "artist": "Siavash Ghomayshi",
+      "region": "persian",
+      "mood": "calm",
+      "trending_at": null,
+      "bpm": null,
+      "start": null,
+      "links": {
+        "youtube": "https://www.youtube.com/results?search_query=Nakhoda+Siavash+Ghomayshi",
+        "radiojavan": "https://www.radiojavan.com/search?query=Nakhoda"
+      }
+    }
+  ]
+}

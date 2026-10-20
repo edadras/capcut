@@ -18,7 +18,14 @@ class Track extends Model
         'bpm' => 'float',
         'highlight_start' => 'float',
         'is_active' => 'boolean',
+        'links' => 'array',
+        'trending_at' => 'date',
     ];
+
+    public const FILE = 'file';
+
+    /** Sound the user adds inside Instagram (no file stored, video rendered silent). */
+    public const INSTAGRAM = 'instagram';
 
     public function templates(): HasMany
     {
@@ -30,12 +37,46 @@ class Track extends Model
         return $q->where('is_active', true);
     }
 
+    public function scopeFiles(Builder $q): Builder
+    {
+        return $q->where('kind', self::FILE);
+    }
+
+    public function scopeInstagram(Builder $q): Builder
+    {
+        return $q->where('kind', self::INSTAGRAM);
+    }
+
+    public function isInstagram(): bool
+    {
+        return $this->kind === self::INSTAGRAM;
+    }
+
+    /**
+     * What to show the user for an Instagram sound: search term, start point and listen links.
+     */
+    public function instagramSound(): ?array
+    {
+        if (! $this->isInstagram()) {
+            return null;
+        }
+
+        return [
+            'title' => $this->title,
+            'artist' => $this->artist,
+            'search' => trim($this->title.' '.$this->artist),
+            'start' => $this->highlight_start > 0 ? gmdate('i:s', (int) $this->highlight_start) : null,
+            'bpm' => $this->bpm,
+            'links' => $this->links ?? [],
+        ];
+    }
+
     /**
      * Attribution line required by CC BY licenses, e.g. for the post caption.
      */
     public function credit(): ?string
     {
-        if (! $this->license) {
+        if (! $this->license || $this->isInstagram()) {
             return null;
         }
 
@@ -43,8 +84,12 @@ class Track extends Model
             .($this->source_url ? " {$this->source_url}" : ''));
     }
 
-    public function absolutePath(): string
+    public function absolutePath(): ?string
     {
+        if ($this->path === null) {
+            return null;
+        }
+
         return Storage::disk(config('reel-maker.music_disk'))->path($this->path);
     }
 }

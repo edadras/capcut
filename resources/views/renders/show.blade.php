@@ -18,10 +18,29 @@
             <a class="btn" id="download" href="{{ $render->outputUrl() }}" download>⬇️ دانلود</a>
             <a class="btn ghost" href="{{ route('reel-maker.templates.show', $render->template) }}">ساخت دوباره</a>
         </p>
+        @if ($sound = ($render->track ?? $render->template->track)?->instagramSound())
+            <div class="panel" style="text-align:start;margin-top:8px;background:#101016">
+                <h3 style="margin:0 0 8px">🎵 حالا آهنگ را در اینستاگرام اضافه کنید</h3>
+                <ol style="margin:0;padding-inline-start:20px;line-height:2">
+                    <li>ویدیو را دانلود کنید و در اینستاگرام «ریلز جدید» بسازید.</li>
+                    <li>روی آیکون 🎵 موسیقی بزنید و این را جست‌وجو کنید:
+                        <b dir="ltr" style="display:inline-block">{{ $sound['search'] }}</b></li>
+                    @if ($sound['start'])
+                        <li>شروع آهنگ را روی <b dir="ltr">{{ $sound['start'] }}</b> بگذارید.</li>
+                    @endif
+                </ol>
+                <p class="muted" style="font-size:13px">
+                    گوش دادن:
+                    @foreach ($sound['links'] as $name => $url)
+                        <a href="{{ $url }}" target="_blank" rel="noopener" style="text-decoration:underline">{{ ['spotify' => 'Spotify', 'youtube' => 'YouTube', 'radiojavan' => 'Radio Javan'][$name] ?? ucfirst($name) }}</a>@if (! $loop->last) · @endif
+                    @endforeach
+                </p>
+            </div>
+        @endif
         @if ($credit = ($render->track ?? $render->template->track)?->credit())
             <div style="text-align:start;margin-top:8px">
                 <label for="credit">این متن را در کپشن پست بگذارید (شرط مجوز آهنگ):</label>
-                <textarea id="credit" rows="2" readonly dir="ltr" onclick="this.select()">{{ $credit }}</textarea>
+                <textarea id="credit" rows="4" readonly dir="ltr" onclick="this.select()">{{ $credit }}</textarea>
                 <button class="btn ghost" type="button" style="margin-top:8px"
                         onclick="navigator.clipboard.writeText(document.getElementById('credit').value);this.textContent='کپی شد ✓'">کپی</button>
             </div>
