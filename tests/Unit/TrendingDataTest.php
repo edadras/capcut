@@ -17,6 +17,11 @@ class TrendingDataTest extends TestCase
             $this->assertArrayHasKey($s['mood'], Catalog::MOODS, $s['title']);
             $this->assertContains($s['region'], ['global', 'turkey', 'rising', 'autumn', 'persian']);
             $this->assertNotEmpty($s['links']);
+            if ($s['bpm'] !== null) {
+                $this->assertGreaterThanOrEqual(50, $s['bpm']);
+                $this->assertLessThanOrEqual(200, $s['bpm']);
+                $this->assertStringStartsWith('https://', $s['bpm_source'], 'every BPM must cite its source');
+            }
             foreach ($s['links'] as $url) {
                 $this->assertMatchesRegularExpression('~^https://(open\.spotify\.com|www\.youtube\.com|www\.radiojavan\.com)/~', $url);
             }

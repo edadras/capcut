@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-20",
-  "note": "Search/listen links only (no audio). Users add the song from Instagram Music when posting. Moods are editorial guesses; bpm/start (seconds) can be filled in for beat sync.",
+  "note": "Search/listen links only (no audio). Users add the song from Instagram Music when posting. Moods are editorial guesses; bpm comes from public tempo databases (see bpm_source; null = no reliable figure found); start (seconds) can be filled in.",
   "sources": {
     "global": "https://soundmatcha.com/trending/",
     "turkey": "https://www.sosyalkopru.com/blog/ekim-2026-turkiye-instagram-en-cok-tercih-edilen-10-ses",
@@ -15,12 +15,14 @@
       "region": "global",
       "mood": "pop",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 149,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/APT.%20ROS%C3%89%20%26%20Bruno%20Mars",
         "youtube": "https://www.youtube.com/results?search_query=APT.+ROS%C3%89+%26+Bruno+Mars"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://tunebat.com/Info/APT-ROS-Bruno-Mars/4wJ5Qq0jBN4ajy7ouZIV1c"
     },
     {
       "title": "Ordinary",
@@ -33,7 +35,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Ordinary%20Alex%20Warren",
         "youtube": "https://www.youtube.com/results?search_query=Ordinary+Alex+Warren"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Beautiful Things",
@@ -41,12 +45,14 @@
       "region": "global",
       "mood": "epic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 70,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Beautiful%20Things%20Benson%20Boone",
         "youtube": "https://www.youtube.com/results?search_query=Beautiful+Things+Benson+Boone"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://www.karaoke-version.com/mp3-backingtrack/benson-boone/beautiful-things.html"
     },
     {
       "title": "Die With A Smile",
@@ -54,12 +60,14 @@
       "region": "global",
       "mood": "romantic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 158,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Die%20With%20A%20Smile%20Lady%20Gaga%20%26%20Bruno%20Mars",
         "youtube": "https://www.youtube.com/results?search_query=Die+With+A+Smile+Lady+Gaga+%26+Bruno+Mars"
-      }
+      },
+      "bpm_confidence": "medium",
+      "bpm_source": "https://www.hooktheory.com/theorytab/view/lady-gaga/die-with-a-smile-(with-bruno-mars)"
     },
     {
       "title": "Papaoutai (Afro Soul)",
@@ -72,7 +80,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Papaoutai%20%28Afro%20Soul%29%20mikeeysmind%2C%20Chill77%20%26%20Unjaps",
         "youtube": "https://www.youtube.com/results?search_query=Papaoutai+%28Afro+Soul%29+mikeeysmind%2C+Chill77+%26+Unjaps"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "The Sound of Silence (CYRIL Remix)",
@@ -85,7 +95,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/The%20Sound%20of%20Silence%20%28CYRIL%20Remix%29%20Disturbed",
         "youtube": "https://www.youtube.com/results?search_query=The+Sound+of+Silence+%28CYRIL+Remix%29+Disturbed"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "As It Was",
@@ -93,12 +105,14 @@
       "region": "global",
       "mood": "pop",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 174,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/As%20It%20Was%20Harry%20Styles",
         "youtube": "https://www.youtube.com/results?search_query=As+It+Was+Harry+Styles"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://jamzone.musicwill.org/songs/as-it-was"
     },
     {
       "title": "Viva La Vida",
@@ -106,12 +120,14 @@
       "region": "global",
       "mood": "epic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 138,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Viva%20La%20Vida%20Coldplay",
         "youtube": "https://www.youtube.com/results?search_query=Viva+La+Vida+Coldplay"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://songbpm.com/@coldplay/viva-la-vida"
     },
     {
       "title": "Dai Dai",
@@ -119,12 +135,14 @@
       "region": "global",
       "mood": "energetic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 116,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Dai%20Dai%20Shakira%20%26%20Burna%20Boy",
         "youtube": "https://www.youtube.com/results?search_query=Dai+Dai+Shakira+%26+Burna+Boy"
-      }
+      },
+      "bpm_confidence": "low",
+      "bpm_source": "https://songdata.io/charts/116bpm"
     },
     {
       "title": "Raindance",
@@ -132,12 +150,14 @@
       "region": "global",
       "mood": "energetic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 106,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Raindance%20Dave%20%26%20Tems",
         "youtube": "https://www.youtube.com/results?search_query=Raindance+Dave+%26+Tems"
-      }
+      },
+      "bpm_confidence": "low",
+      "bpm_source": "https://alarmify.com/wake-up-to/tems/"
     },
     {
       "title": "Dracula",
@@ -145,12 +165,14 @@
       "region": "global",
       "mood": "chill",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 118,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Dracula%20Tame%20Impala",
         "youtube": "https://www.youtube.com/results?search_query=Dracula+Tame+Impala"
-      }
+      },
+      "bpm_confidence": "low",
+      "bpm_source": "https://www.musiciwant.com/song/dracula-tame-impala"
     },
     {
       "title": "So Easy (To Fall In Love)",
@@ -158,12 +180,14 @@
       "region": "global",
       "mood": "happy",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 140,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/So%20Easy%20%28To%20Fall%20In%20Love%29%20Olivia%20Dean",
         "youtube": "https://www.youtube.com/results?search_query=So+Easy+%28To+Fall+In+Love%29+Olivia+Dean"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://www.hooktheory.com/theorytab/view/olivia-dean/so-easy-(to-fall-in-love)"
     },
     {
       "title": "End of Beginning",
@@ -176,7 +200,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/End%20of%20Beginning%20Djo",
         "youtube": "https://www.youtube.com/results?search_query=End+of+Beginning+Djo"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Runaway",
@@ -184,12 +210,14 @@
       "region": "global",
       "mood": "calm",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 58,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Runaway%20AURORA",
         "youtube": "https://www.youtube.com/results?search_query=Runaway+AURORA"
-      }
+      },
+      "bpm_confidence": "medium",
+      "bpm_source": "https://www.musicnotes.com/sheetmusic/aurora/runaway/MN0233496"
     },
     {
       "title": "Perfect",
@@ -197,12 +225,14 @@
       "region": "global",
       "mood": "romantic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 63,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Perfect%20Ed%20Sheeran",
         "youtube": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://www.musicnotes.com/sheetmusic/ed-sheeran/perfect/MN0172576"
     },
     {
       "title": "BIRDS OF A FEATHER",
@@ -210,12 +240,14 @@
       "region": "global",
       "mood": "romantic",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 105,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/BIRDS%20OF%20A%20FEATHER%20Billie%20Eilish",
         "youtube": "https://www.youtube.com/results?search_query=BIRDS+OF+A+FEATHER+Billie+Eilish"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://www.karaoke-version.com/mp3-backingtrack/billie-eilish/birds-of-a-feather.html"
     },
     {
       "title": "In This Shirt",
@@ -228,7 +260,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/In%20This%20Shirt%20The%20Irrepressibles",
         "youtube": "https://www.youtube.com/results?search_query=In+This+Shirt+The+Irrepressibles"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Anxiety",
@@ -241,7 +275,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Anxiety%20Doechii",
         "youtube": "https://www.youtube.com/results?search_query=Anxiety+Doechii"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Strangers",
@@ -249,12 +285,14 @@
       "region": "global",
       "mood": "chill",
       "trending_at": "2026-10-16",
-      "bpm": null,
+      "bpm": 170,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Strangers%20Kenya%20Grace",
         "youtube": "https://www.youtube.com/results?search_query=Strangers+Kenya+Grace"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://openmusic.academy/docs/gn5muwrC947TfieESK53dD"
     },
     {
       "title": "Sweet Heat Lightning",
@@ -267,7 +305,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Sweet%20Heat%20Lightning%20Gregory%20Alan%20Isakov",
         "youtube": "https://www.youtube.com/results?search_query=Sweet+Heat+Lightning+Gregory+Alan+Isakov"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "TRALALA",
@@ -280,7 +320,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/TRALALA%20manifest",
         "youtube": "https://www.youtube.com/results?search_query=TRALALA+manifest"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Sebebi Var",
@@ -293,7 +335,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Sebebi%20Var%20BLOK3",
         "youtube": "https://www.youtube.com/results?search_query=Sebebi+Var+BLOK3"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Hileli",
@@ -306,7 +350,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Hileli%20manifest%2C%20Ajda%20Pekkan",
         "youtube": "https://www.youtube.com/results?search_query=Hileli+manifest%2C+Ajda+Pekkan"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Çok Güzel Gülüyorsun",
@@ -319,7 +365,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/%C3%87ok%20G%C3%BCzel%20G%C3%BCl%C3%BCyorsun%20BLOK3%2C%20Poizi",
         "youtube": "https://www.youtube.com/results?search_query=%C3%87ok+G%C3%BCzel+G%C3%BCl%C3%BCyorsun+BLOK3%2C+Poizi"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Ara Beni",
@@ -332,7 +380,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Ara%20Beni%20Hadise",
         "youtube": "https://www.youtube.com/results?search_query=Ara+Beni+Hadise"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Toz Pembe",
@@ -345,7 +395,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Toz%20Pembe%20manifest",
         "youtube": "https://www.youtube.com/results?search_query=Toz+Pembe+manifest"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Eller Üzer",
@@ -358,7 +410,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Eller%20%C3%9Czer%20Serkan%20Ni%C5%9Fanc%C4%B1",
         "youtube": "https://www.youtube.com/results?search_query=Eller+%C3%9Czer+Serkan+Ni%C5%9Fanc%C4%B1"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Yangın Yeri",
@@ -371,7 +425,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Yang%C4%B1n%20Yeri%20Elif%20Buse%20Do%C4%9Fan",
         "youtube": "https://www.youtube.com/results?search_query=Yang%C4%B1n+Yeri+Elif+Buse+Do%C4%9Fan"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Umrumdışı",
@@ -384,7 +440,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Umrumd%C4%B1%C5%9F%C4%B1%20Mabel%20Matiz",
         "youtube": "https://www.youtube.com/results?search_query=Umrumd%C4%B1%C5%9F%C4%B1+Mabel+Matiz"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Kayıp Kalp",
@@ -397,7 +455,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Kay%C4%B1p%20Kalp%20BLOK3",
         "youtube": "https://www.youtube.com/results?search_query=Kay%C4%B1p+Kalp+BLOK3"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Achchi Lagti Ho",
@@ -410,7 +470,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Achchi%20Lagti%20Ho%20Udit%20Narayan%2C%20Kavita%20Krishnamurthy",
         "youtube": "https://www.youtube.com/results?search_query=Achchi+Lagti+Ho+Udit+Narayan%2C+Kavita+Krishnamurthy"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Training Season (Live from the Royal Albert Hall)",
@@ -423,7 +485,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Training%20Season%20%28Live%20from%20the%20Royal%20Albert%20Hall%29%20Dua%20Lipa",
         "youtube": "https://www.youtube.com/results?search_query=Training+Season+%28Live+from+the+Royal+Albert+Hall%29+Dua+Lipa"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Shyam Nagina Ban Jate",
@@ -436,7 +500,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Shyam%20Nagina%20Ban%20Jate%20Ankit%20Pandey%2C%20Ravindra%20Vasudev",
         "youtube": "https://www.youtube.com/results?search_query=Shyam+Nagina+Ban+Jate+Ankit+Pandey%2C+Ravindra+Vasudev"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "God's Favorite (feat. Sultaan)",
@@ -449,7 +515,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/God%27s%20Favorite%20%28feat.%20Sultaan%29%20Jordan%20Sandhu%2C%20Sultaan%2C%20Kaptaan%2C%20Avvy%20Sra",
         "youtube": "https://www.youtube.com/results?search_query=God%27s+Favorite+%28feat.+Sultaan%29+Jordan+Sandhu%2C+Sultaan%2C+Kaptaan%2C+Avvy+Sra"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Parvati",
@@ -462,7 +530,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Parvati%20Sadhu%20Tiwari",
         "youtube": "https://www.youtube.com/results?search_query=Parvati+Sadhu+Tiwari"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "QUE LOUCURA (Instrumental)",
@@ -475,7 +545,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/QUE%20LOUCURA%20%28Instrumental%29%20DJ%20EXE",
         "youtube": "https://www.youtube.com/results?search_query=QUE+LOUCURA+%28Instrumental%29+DJ+EXE"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Saxophones Getting Louder",
@@ -488,7 +560,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Saxophones%20Getting%20Louder%20AXRYN",
         "youtube": "https://www.youtube.com/results?search_query=Saxophones+Getting+Louder+AXRYN"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "O Sanam",
@@ -501,7 +575,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/O%20Sanam%20Akhil%20Sachdeva",
         "youtube": "https://www.youtube.com/results?search_query=O+Sanam+Akhil+Sachdeva"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "biting bullets",
@@ -514,7 +590,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/biting%20bullets%20ridgeclub",
         "youtube": "https://www.youtube.com/results?search_query=biting+bullets+ridgeclub"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Fade Into You",
@@ -522,12 +600,14 @@
       "region": "rising",
       "mood": "calm",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 68,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Fade%20Into%20You%20Mazzy%20Star",
         "youtube": "https://www.youtube.com/results?search_query=Fade+Into+You+Mazzy+Star"
-      }
+      },
+      "bpm_confidence": "low",
+      "bpm_source": "https://musiciwant.com/song/fade-into-you"
     },
     {
       "title": "This Will Be (An Everlasting Love)",
@@ -535,12 +615,14 @@
       "region": "rising",
       "mood": "happy",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 126,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/This%20Will%20Be%20%28An%20Everlasting%20Love%29%20Natalie%20Cole",
         "youtube": "https://www.youtube.com/results?search_query=This+Will+Be+%28An+Everlasting+Love%29+Natalie+Cole"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://songbpm.com/@natalie-cole/this-will-be-an-everlasting-love---2003-digital-remaster"
     },
     {
       "title": "Purple Rain",
@@ -548,12 +630,14 @@
       "region": "rising",
       "mood": "epic",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 58,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Purple%20Rain%20Prince%20%26%20The%20Revolution",
         "youtube": "https://www.youtube.com/results?search_query=Purple+Rain+Prince+%26+The+Revolution"
-      }
+      },
+      "bpm_confidence": "medium",
+      "bpm_source": "https://jamzone.musicwill.org/songs/inthestyleof-purplerain-by-prince"
     },
     {
       "title": "Grateful",
@@ -566,7 +650,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Grateful%20Dennis%20Korn",
         "youtube": "https://www.youtube.com/results?search_query=Grateful+Dennis+Korn"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Magnolia",
@@ -579,7 +665,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Magnolia%20Claudio%20Constantini",
         "youtube": "https://www.youtube.com/results?search_query=Magnolia+Claudio+Constantini"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Bandoleros",
@@ -592,7 +680,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Bandoleros%20Don%20Omar%2C%20Tego%20Calder%C3%B3n",
         "youtube": "https://www.youtube.com/results?search_query=Bandoleros+Don+Omar%2C+Tego+Calder%C3%B3n"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "we fell in love in october",
@@ -605,7 +695,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/we%20fell%20in%20love%20in%20october%20girl%20in%20red",
         "youtube": "https://www.youtube.com/results?search_query=we+fell+in+love+in+october+girl+in+red"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "My October",
@@ -618,7 +710,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/My%20October%20The%20Folks",
         "youtube": "https://www.youtube.com/results?search_query=My+October+The+Folks"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Goo Goo Muck",
@@ -626,12 +720,14 @@
       "region": "autumn",
       "mood": "energetic",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 142,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Goo%20Goo%20Muck%20The%20Cramps",
         "youtube": "https://www.youtube.com/results?search_query=Goo+Goo+Muck+The+Cramps"
-      }
+      },
+      "bpm_confidence": "medium",
+      "bpm_source": "https://www.karaoke-version.com/mp3-backingtrack/the-cramps/goo-goo-muck.html"
     },
     {
       "title": "STORM II",
@@ -644,7 +740,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/STORM%20II%20GENER8ION%20%26%20Yung%20Lean",
         "youtube": "https://www.youtube.com/results?search_query=STORM+II+GENER8ION+%26+Yung+Lean"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Autumn Journey",
@@ -657,7 +755,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Autumn%20Journey%20Andrea%20Vanzo",
         "youtube": "https://www.youtube.com/results?search_query=Autumn+Journey+Andrea+Vanzo"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "My Own Universe",
@@ -670,7 +770,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/My%20Own%20Universe%20PattiJ%20North",
         "youtube": "https://www.youtube.com/results?search_query=My+Own+Universe+PattiJ+North"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "WINDOWS IN BRAZIL (Sped Up)",
@@ -683,7 +785,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/WINDOWS%20IN%20BRAZIL%20%28Sped%20Up%29",
         "youtube": "https://www.youtube.com/results?search_query=WINDOWS+IN+BRAZIL+%28Sped+Up%29"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Upside Down",
@@ -691,12 +795,14 @@
       "region": "autumn",
       "mood": "happy",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 108,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Upside%20Down%20Diana%20Ross",
         "youtube": "https://www.youtube.com/results?search_query=Upside+Down+Diana+Ross"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://acousticbrainz.org/2b697adc-4ab1-49ea-a5ab-eb8714b8d3f6"
     },
     {
       "title": "Ring My Bell",
@@ -704,12 +810,14 @@
       "region": "autumn",
       "mood": "happy",
       "trending_at": "2026-10-20",
-      "bpm": null,
+      "bpm": 126,
       "start": null,
       "links": {
         "spotify": "https://open.spotify.com/search/Ring%20My%20Bell%20Anita%20Ward",
         "youtube": "https://www.youtube.com/results?search_query=Ring+My+Bell+Anita+Ward"
-      }
+      },
+      "bpm_confidence": "high",
+      "bpm_source": "https://www.musicnotes.com/sheetmusic/anita-ward/ring-my-bell/MN0179175"
     },
     {
       "title": "Less Than a Lover",
@@ -722,7 +830,9 @@
       "links": {
         "spotify": "https://open.spotify.com/search/Less%20Than%20a%20Lover%20JENNIE",
         "youtube": "https://www.youtube.com/results?search_query=Less+Than+a+Lover+JENNIE"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Adat Nadaram",
@@ -735,7 +845,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Adat+Nadaram+Sijal%2C+Raha%2C+Heliyom%2C+Koorosh+%26+Sepehr+Khalse",
         "radiojavan": "https://www.radiojavan.com/search?query=Adat%20Nadaram"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "You Fa",
@@ -748,7 +860,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=You+Fa+Ali+Ardavan%2C+Nima+Tekido+%26+Nivad",
         "radiojavan": "https://www.radiojavan.com/search?query=You%20Fa"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "HYSTERIC",
@@ -761,7 +875,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=HYSTERIC+Isam+%26+Koorosh",
         "radiojavan": "https://www.radiojavan.com/search?query=HYSTERIC"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Donyaye Dige",
@@ -774,7 +890,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Donyaye+Dige+Arshiyas+%26+Babak+Jahanbakhsh",
         "radiojavan": "https://www.radiojavan.com/search?query=Donyaye%20Dige"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Adabiat",
@@ -787,7 +905,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Adabiat+Chvrsi+%26+Arian+Dousti",
         "radiojavan": "https://www.radiojavan.com/search?query=Adabiat"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Hezar Omid",
@@ -800,7 +920,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Hezar+Omid+Arman+Garshasbi",
         "radiojavan": "https://www.radiojavan.com/search?query=Hezar%20Omid"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Shodi Nooram",
@@ -813,7 +935,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Shodi+Nooram+Novan",
         "radiojavan": "https://www.radiojavan.com/search?query=Shodi%20Nooram"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Shakheye Gol",
@@ -826,7 +950,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Shakheye+Gol+Sijal+%26+Sogand",
         "radiojavan": "https://www.radiojavan.com/search?query=Shakheye%20Gol"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Begoo Be Donya",
@@ -839,7 +965,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Begoo+Be+Donya+Ebi",
         "radiojavan": "https://www.radiojavan.com/search?query=Begoo%20Be%20Donya"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     },
     {
       "title": "Nakhoda",
@@ -852,7 +980,9 @@
       "links": {
         "youtube": "https://www.youtube.com/results?search_query=Nakhoda+Siavash+Ghomayshi",
         "radiojavan": "https://www.radiojavan.com/search?query=Nakhoda"
-      }
+      },
+      "bpm_confidence": null,
+      "bpm_source": null
     }
   ]
 }
