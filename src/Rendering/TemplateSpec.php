@@ -26,6 +26,11 @@ final class TemplateSpec
         public readonly int $minImages = 3,
         public readonly int $maxImages = 10,
         public readonly int $variant = 0,
+        public readonly string $beatEffect = 'none',
+        public readonly string $overlay = 'none',
+        public readonly string $textAnimation = 'fade',
+        public readonly ?string $intro = null,
+        public readonly bool $fadeOut = true,
     ) {
         if (! isset(Catalog::LAYOUTS[$layout])) {
             throw new InvalidArgumentException("Unknown layout [$layout].");
@@ -39,7 +44,20 @@ final class TemplateSpec
         if (! isset(Catalog::TEXT_STYLES[$textStyle])) {
             throw new InvalidArgumentException("Unknown text style [$textStyle].");
         }
-        if ($transitions === [] || array_diff($transitions, Catalog::TRANSITIONS) !== []) {
+        if (! isset(Catalog::BEAT_EFFECTS[$beatEffect])) {
+            throw new InvalidArgumentException("Unknown beat effect [$beatEffect].");
+        }
+        if (! isset(Catalog::OVERLAYS[$overlay])) {
+            throw new InvalidArgumentException("Unknown overlay [$overlay].");
+        }
+        if (! isset(Catalog::TEXT_ANIMATIONS[$textAnimation])) {
+            throw new InvalidArgumentException("Unknown text animation [$textAnimation].");
+        }
+        if ($intro !== null && ! isset(Catalog::FX_TRANSITIONS[$intro])) {
+            throw new InvalidArgumentException("Unknown intro [$intro].");
+        }
+        $known = array_merge(Catalog::TRANSITIONS, array_keys(Catalog::FX_TRANSITIONS));
+        if ($transitions === [] || array_diff($transitions, $known) !== []) {
             throw new InvalidArgumentException('Invalid transitions: '.implode(',', $transitions));
         }
         if ($slideDuration < 0.3 || $minImages < 1 || $maxImages < $minImages) {
@@ -62,6 +80,11 @@ final class TemplateSpec
             minImages: (int) ($c['min_images'] ?? 3),
             maxImages: (int) ($c['max_images'] ?? 10),
             variant: (int) ($c['variant'] ?? 0),
+            beatEffect: $c['beat_effect'] ?? 'none',
+            overlay: $c['overlay'] ?? 'none',
+            textAnimation: $c['text_animation'] ?? 'fade',
+            intro: $c['intro'] ?? null,
+            fadeOut: (bool) ($c['fade_out'] ?? true),
         );
     }
 
@@ -80,6 +103,11 @@ final class TemplateSpec
             'min_images' => $this->minImages,
             'max_images' => $this->maxImages,
             'variant' => $this->variant,
+            'beat_effect' => $this->beatEffect,
+            'overlay' => $this->overlay,
+            'text_animation' => $this->textAnimation,
+            'intro' => $this->intro,
+            'fade_out' => $this->fadeOut,
         ];
     }
 }

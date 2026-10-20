@@ -4,6 +4,7 @@ namespace ReelMaker;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use ReelMaker\Console\FetchMusicCommand;
 use ReelMaker\Console\GeneratePreviewsCommand;
 use ReelMaker\Console\GenerateTemplatesCommand;
 use ReelMaker\Console\ImportMusicCommand;
@@ -48,6 +49,7 @@ class ReelMakerServiceProvider extends ServiceProvider
             $this->commands([
                 GenerateTemplatesCommand::class,
                 ImportMusicCommand::class,
+                FetchMusicCommand::class,
                 GeneratePreviewsCommand::class,
             ]);
 

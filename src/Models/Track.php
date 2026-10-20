@@ -30,6 +30,19 @@ class Track extends Model
         return $q->where('is_active', true);
     }
 
+    /**
+     * Attribution line required by CC BY licenses, e.g. for the post caption.
+     */
+    public function credit(): ?string
+    {
+        if (! $this->license) {
+            return null;
+        }
+
+        return trim("🎵 {$this->title}".($this->artist ? " — {$this->artist}" : '')." ({$this->license})"
+            .($this->source_url ? " {$this->source_url}" : ''));
+    }
+
     public function absolutePath(): string
     {
         return Storage::disk(config('reel-maker.music_disk'))->path($this->path);

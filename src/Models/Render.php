@@ -60,6 +60,7 @@ class Render extends Model
             'template' => $this->template?->slug,
             'duration' => $this->duration,
             'url' => $this->status === self::DONE ? $this->outputUrl() : null,
+            'music_credit' => ($this->track ?? $this->template?->track)?->credit(),
             'error' => $this->status === self::FAILED ? 'ساخت ویدیو ناموفق بود. دوباره تلاش کنید.' : null,
         ];
     }

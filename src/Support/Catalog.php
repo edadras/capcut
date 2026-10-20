@@ -20,6 +20,46 @@ final class Catalog
         'hblur', 'squeezev', 'squeezeh', 'coverleft', 'revealright',
     ];
 
+    /**
+     * CapCut-style "effect" transitions: a hard cut on the beat, dressed with
+     * zoom punches, motion blur, whips, spins, flashes or glitches on both sides.
+     */
+    public const FX_TRANSITIONS = [
+        'zoom_in' => 'زوم ضربه‌ای',
+        'zoom_spin' => 'زوم چرخشی',
+        'spin' => 'چرخش',
+        'whip_left' => 'ویپ چپ',
+        'whip_right' => 'ویپ راست',
+        'whip_up' => 'ویپ بالا',
+        'whip_down' => 'ویپ پایین',
+        'flash' => 'فلش',
+        'glitch' => 'گلیچ',
+        'shake' => 'لرزش',
+        'blur' => 'محو حرکتی',
+    ];
+
+    /** Effect repeated on every beat of the music. */
+    public const BEAT_EFFECTS = [
+        'none' => 'بدون افکت ضرب',
+        'pulse' => 'پالس زوم',
+        'flash' => 'فلش روی ضرب',
+        'shake' => 'لرزش روی ضرب',
+    ];
+
+    public const OVERLAYS = [
+        'none' => 'بدون پوشش',
+        'light_leak' => 'نشت نور',
+        'grain' => 'دانه فیلم',
+        'letterbox' => 'نوار سینمایی',
+        'film' => 'فیلم قدیمی',
+    ];
+
+    public const TEXT_ANIMATIONS = [
+        'fade' => 'محو',
+        'pop' => 'پاپ',
+        'slide_up' => 'ورود از پایین',
+    ];
+
     public const MOTIONS = [
         'none' => 'ثابت',
         'zoom_in' => 'زوم به داخل',

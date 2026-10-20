@@ -18,6 +18,14 @@
             <a class="btn" id="download" href="{{ $render->outputUrl() }}" download>⬇️ دانلود</a>
             <a class="btn ghost" href="{{ route('reel-maker.templates.show', $render->template) }}">ساخت دوباره</a>
         </p>
+        @if ($credit = ($render->track ?? $render->template->track)?->credit())
+            <div style="text-align:start;margin-top:8px">
+                <label for="credit">این متن را در کپشن پست بگذارید (شرط مجوز آهنگ):</label>
+                <textarea id="credit" rows="2" readonly dir="ltr" onclick="this.select()">{{ $credit }}</textarea>
+                <button class="btn ghost" type="button" style="margin-top:8px"
+                        onclick="navigator.clipboard.writeText(document.getElementById('credit').value);this.textContent='کپی شد ✓'">کپی</button>
+            </div>
+        @endif
     </div>
 
     <div id="failed" @if ($render->status !== 'failed') hidden @endif>

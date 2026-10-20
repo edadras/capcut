@@ -27,7 +27,23 @@ final class TemplateGenerator
         'wipe' => ['wipeleft', 'wiperight', 'wipeup', 'wipedown', 'diagtl', 'diagbr', 'radial'],
         'shape' => ['circleopen', 'circleclose', 'circlecrop', 'rectcrop', 'vertopen', 'vertclose', 'horzopen', 'horzclose'],
         'glitch' => ['pixelize', 'zoomin', 'squeezev', 'squeezeh'],
+        // CapCut-style effect cuts
+        'punch' => ['zoom_in', 'zoom_spin', 'zoom_in', 'flash'],
+        'whip' => ['whip_left', 'whip_right', 'whip_up', 'whip_down'],
+        'energy' => ['zoom_in', 'whip_left', 'whip_right', 'spin', 'flash', 'glitch', 'shake', 'zoom_spin'],
+        'dreamy' => ['blur', 'flash', 'fadewhite', 'dissolve', 'zoom_in'],
     ];
+
+    /** Transition groups each energy level draws from (repeats = weight). */
+    private const GROUPS_BY_ENERGY = [
+        'high' => ['punch', 'whip', 'energy', 'energy', 'glitch', 'slide'],
+        'medium' => ['punch', 'whip', 'slide', 'wipe', 'shape', 'dreamy', 'soft'],
+        'low' => ['soft', 'soft', 'dreamy', 'dreamy', 'slide', 'shape'],
+    ];
+
+    private const HIGH_ENERGY = ['trend', 'sport', 'fashion', 'friends', 'birthday'];
+
+    private const LOW_ENERGY = ['love', 'memories', 'wedding', 'family', 'aesthetic', 'yalda', 'nature'];
 
     /**
      * @param  array<string, list<array{id: int, mood: string}>>  $tracksByMood
@@ -56,7 +72,9 @@ final class TemplateGenerator
             $layout = $rand->getInt(1, 3) === 1 ? 'blur' : 'fill';
             $format = $rand->getInt(1, 3) === 1 ? 'story' : 'reel';
             $textStyle = $this->pick($rand, array_keys(Catalog::TEXT_STYLES));
-            $transitions = $this->transitions($rand, $pacing);
+            $energy = in_array($category, self::HIGH_ENERGY, true) ? 'high' : (in_array($category, self::LOW_ENERGY, true) ? 'low' : 'medium');
+            $transitions = $this->transitions($rand, $pacing, $energy);
+            $fx = $this->effects($rand, $energy);
             [$minImages, $maxImages] = self::IMAGE_BOUNDS[$pacing];
 
             $mood = $this->pick($rand, $rules['moods']);
@@ -88,7 +106,7 @@ final class TemplateGenerator
                 'variant' => $rand->getInt(0, 5),
                 'pacing' => $pacing,
                 'mood' => $mood,
-            ];
+            ] + $fx;
 
             $key = md5(json_encode([$category, $config, $trackId]));
             if (isset($seen[$key])) {
@@ -113,28 +131,52 @@ final class TemplateGenerator
     /**
      * @return list<string>
      */
-    private function transitions(Randomizer $rand, string $pacing): array
+    private function transitions(Randomizer $rand, string $pacing, string $energy): array
     {
         // Fast edits often use hard cuts, like most trending templates.
-        if (($pacing === 'flash' && $rand->getInt(1, 2) === 1) || $rand->getInt(1, 8) === 1) {
+        if (($pacing === 'flash' && $rand->getInt(1, 3) === 1) || $rand->getInt(1, 12) === 1) {
             return ['cut'];
         }
 
-        $group = self::TRANSITION_GROUPS[$this->pick($rand, array_keys(self::TRANSITION_GROUPS))];
+        $group = self::TRANSITION_GROUPS[$this->pick($rand, self::GROUPS_BY_ENERGY[$energy])];
+        $group = array_values(array_unique($group));
         $n = $rand->getInt(1, 3);
         $picked = $rand->pickArrayKeys($group, min($n, count($group)));
 
         return array_values(array_map(fn ($k) => $group[$k], $picked));
     }
 
+    /**
+     * Beat effect, overlay, caption animation and intro, weighted by energy.
+     */
+    private function effects(Randomizer $rand, string $energy): array
+    {
+        $beat = match ($energy) {
+            'high' => ['pulse', 'pulse', 'shake', 'flash', 'none'],
+            'medium' => ['pulse', 'none', 'none', 'flash'],
+            default => ['none', 'none', 'none', 'pulse'],
+        };
+        $overlay = match ($energy) {
+            'high' => ['none', 'none', 'grain', 'light_leak'],
+            'medium' => ['none', 'light_leak', 'grain', 'letterbox'],
+            default => ['light_leak', 'light_leak', 'film', 'letterbox', 'none'],
+        };
+        $intro = $energy === 'low' ? ['blur', 'flash', null, null] : ['zoom_in', 'flash', 'spin', null, null];
+
+        return [
+            'beat_effect' => $this->pick($rand, $beat),
+            'overlay' => $this->pick($rand, $overlay),
+            'text_animation' => $this->pick($rand, array_keys(Catalog::TEXT_ANIMATIONS)),
+            'intro' => $this->pick($rand, $intro),
+        ];
+    }
+
     private function name(string $category, array $c): string
     {
-        return sprintf(
-            '%s · %s · %s',
-            Catalog::CATEGORIES[$category]['label'],
-            Catalog::FILTERS[$c['filter']][0],
-            Catalog::MOTIONS[$c['motion']],
-        );
+        $fx = array_values(array_intersect($c['transitions'], array_keys(Catalog::FX_TRANSITIONS)));
+        $style = $fx !== [] ? Catalog::FX_TRANSITIONS[$fx[0]] : Catalog::MOTIONS[$c['motion']];
+
+        return sprintf('%s · %s · %s', Catalog::CATEGORIES[$category]['label'], $style, Catalog::FILTERS[$c['filter']][0]);
     }
 
     private function pick(Randomizer $rand, array $items): mixed

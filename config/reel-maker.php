@@ -51,6 +51,9 @@ return [
     // Font used for captions. Empty = bundled Vazirmatn Bold (supports Persian & Latin).
     'font' => env('REEL_MAKER_FONT'),
 
+    // Free API key for `reel-maker:fetch-music --provider=jamendo`.
+    'jamendo_client_id' => env('REEL_MAKER_JAMENDO_CLIENT_ID'),
+
     /*
     |--------------------------------------------------------------------------
     | Queue

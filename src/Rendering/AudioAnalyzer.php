@@ -29,6 +29,52 @@ final class AudioAnalyzer
     }
 
     /**
+     * Start (seconds) of the loudest $window-second stretch: usually the chorus / drop,
+     * which is where short-form videos should start the music.
+     */
+    public function highlight(string $path, float $window = 20.0): float
+    {
+        $rate = 2000;
+        $p = new Process([$this->ffmpeg, '-v', 'error', '-i', $path, '-ac', '1', '-ar', (string) $rate, '-f', 's16le', '-']);
+        $p->setTimeout(120);
+        $p->run();
+        if (! $p->isSuccessful()) {
+            return 0.0;
+        }
+
+        // Energy per half second.
+        $samples = unpack('s*', $p->getOutput()) ?: [];
+        $block = $rate / 2;
+        $energy = [];
+        foreach (array_chunk($samples, $block) as $chunk) {
+            $e = 0.0;
+            foreach ($chunk as $v) {
+                $e += $v * $v;
+            }
+            $energy[] = $e / count($chunk);
+        }
+
+        $span = (int) ($window * 2);
+        if (count($energy) <= $span + 4) {
+            return 0.0;
+        }
+
+        // Skip the first seconds (intros are rarely the best part).
+        $best = 0;
+        $bestSum = -1.0;
+        $sum = array_sum(array_slice($energy, 0, $span));
+        for ($i = 0; $i + $span < count($energy); $i++) {
+            if ($i >= 10 && $sum > $bestSum) {
+                $bestSum = $sum;
+                $best = $i;
+            }
+            $sum += $energy[$i + $span] - $energy[$i];
+        }
+
+        return $best / 2;
+    }
+
+    /**
      * Onset-envelope autocorrelation tempo estimate, limited to 70–180 BPM.
      */
     public function bpm(string $path, float $start = 0.0, float $length = 45.0): ?float
